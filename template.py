@@ -1,11 +1,11 @@
 from stdlib import *  # noqa
 
 
-def part_1(lines):
+def part_1(lines: list[str]):
     pass
 
 
-def part_2(lines):
+def part_2(lines: list[str]):
     pass
 
 

@@ -26,8 +26,20 @@ DEBUG = Flag(False)
 EXAMPLE = Flag(False)
 
 
+def debug(*args):
+    if DEBUG:
+        if len(args) == 1:
+            pprint(args[0])
+        else:
+            pprint(args)
+
+
 def ints(line):
     return [int(x) for x in re.findall(r"-?\d+", line)]
+
+
+def positive_ints(line):
+    return [int(x) for x in re.findall(r"\d+", line)]
 
 
 def read_input(filename=None):
