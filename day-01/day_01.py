@@ -24,6 +24,7 @@ def extract_digits_part1(line) -> list[str]:
 
 def extract_digits_part2(line) -> list[int]:
     pattern = "|".join(NUMBERS.keys())
+    # https://stackoverflow.com/a/5616910
     return [NUMBERS[num] for num in re.findall(f"(?=({pattern}))", line)]
 
 
